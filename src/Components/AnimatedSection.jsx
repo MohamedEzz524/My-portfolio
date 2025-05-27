@@ -2,18 +2,18 @@ import { motion } from "framer-motion";
 
 export const AnimatedSection = ({ children, delay = 0, className = "" }) => {
   return (
-    <motion.span
+    <motion.div
       initial={{ opacity: 0, y: 50 }}
       whileInView={{
         opacity: 1,
         y: 0,
         transition: {
-          duration: 0.5,
+          duration: 0.3,
           ease: "easeOut",
           delay,
         },
       }}
-      viewport={{ once: true, margin: "0px 0px -100px 0px" }}
+      viewport={{ once: true, margin: "0px 0px 0px 0px" }}
       className={`motion-section ${className}`}
       style={{
         // CSS-based mobile optimizations
@@ -22,6 +22,6 @@ export const AnimatedSection = ({ children, delay = 0, className = "" }) => {
       }}
     >
       {children}
-    </motion.span>
+    </motion.div>
   );
 };

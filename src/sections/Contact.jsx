@@ -1,8 +1,8 @@
 import { useState } from "react";
-//Formspree To send Email Third-party service
+
 import { useForm } from "@formspree/react";
-import InputType from "./InputType";
-import HeroTitle from "./Hero_title";
+import InputType from "../Components/InputType";
+import HeroTitle from "../Components/Hero_title";
 import { FaCheck } from "react-icons/fa";
 
 export default function Contact() {

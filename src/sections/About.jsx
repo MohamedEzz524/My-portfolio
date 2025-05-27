@@ -1,4 +1,3 @@
-import { AnimatedSection } from "./Components/AnimatedSection/AnimatedSection";
 import { motion } from "framer-motion";
 
 import {
@@ -7,9 +6,10 @@ import {
   FaBookmark,
   FaIdCard,
 } from "react-icons/fa";
-import HeroTitle from "./Hero_title";
-import { academic, aboutInfo } from "./Data_Center.js";
+import HeroTitle from "../Components/Hero_title.jsx";
+import { academic, aboutInfo } from "../Data_Center.js";
 import { useState } from "react";
+import AboutMeParagraph from "../Components/AboutMeParagraph.jsx";
 
 export default function About() {
   const [showAbout, setShowAbout] = useState(Array(5).fill(true));
@@ -25,40 +25,34 @@ export default function About() {
   return (
     <section id="about" className="section-style pb-[20px] border-divider">
       <HeroTitle setShow={setShowAbout} state={true} title={`<ABOUT ME>`} />
-      <div className="flex flex-col gap-8 px-5 py-4 shadow-md max-sm:border-none max-sm:p-0">
+      <div className="flex flex-col gap-2 px-5 py-4 shadow-md max-sm:border-none max-sm:p-0">
         {/* 0 */}
-        <AnimatedSection delay={0.2}>
-          <div
-            className={`text-text small-body font-medium my-1 relative main-trans group bg-white/5 p-4 backdrop-blur-lg `}
-          >
-            <span
-              className="big-dot max-sm:hidden -translate-x-3.5 cursor-pointer group
+        <div
+          className={`text-text small-body hover:bg-cardBg rounded-sm font-medium my-1 relative main-trans group sm:p-2 backdrop-blur-lg `}
+        >
+          <span
+            className="big-dot max-sm:hidden -translate-x-3.5 cursor-pointer group
               ring-2 ring-ring ring-offset-2 ring-offset-bg group-hover:ring-primary"
-              onClick={() => toggleParent(0, setShowAbout)}
+            onClick={() => toggleParent(0, setShowAbout)}
+          />
+
+          <div className={`${!showAbout[0] ? "hidden" : "block"}`}>
+            <AboutMeParagraph
+              mark="Hi there!"
+              para="I'm Mohamed ElSayed a Computer Engineer and React Developer, I enjoy building clean, functional interfaces with **React** and **TypeScript**, focusing on accessibility and maintainable code.  
+              My engineering background helps me approach problems methodically, while my design curiosity keeps me focused on creating intuitive user experiences.  
+              Always learning, always iterating—I’m excited to contribute to meaningful projects and grow alongside talented teams."
             />
-
-            <p className={`${!showAbout[0] ? "hidden" : "block"}`}>
-              <span className="font-extrabold">Hey,</span> I'm a Computer
-              Engineering grad turned pixel perfectionist—specializing in
-              crafting sleek, user-first web experiences with React. I blend
-              clean code with bold design, building interfaces that not only
-              look sharp but feel intuitive. Always curious, always learning—I'm
-              into transforming ideas into smooth, responsive, and accessible
-              UIs. Collaboration, creativity, and constant growth fuel my
-              journey—and I'm just getting started.
-            </p>
-
-            <p
-              className={`collapse-title  ${
-                !showAbout[0] ? "block" : "hidden"
-              }`}
-              onClick={() => toggleParent(0, setShowAbout)}
-            >
-              Know Me
-            </p>
           </div>
-          <span className="section-divider"></span>
-        </AnimatedSection>
+
+          <p
+            className={`collapse-title  ${!showAbout[0] ? "block" : "hidden"}`}
+            onClick={() => toggleParent(0, setShowAbout)}
+          >
+            Know Me
+          </p>
+        </div>
+        <span className="section-divider" />
 
         {/* Academic Foundation */}
         <div>
@@ -91,6 +85,7 @@ export default function About() {
                   </p>
                   <p className="text-primary font-medium mt-1">2018 – 2023</p>
                 </motion.div>
+
                 <motion.div
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
@@ -137,6 +132,8 @@ export default function About() {
             )}
           </div>
         </div>
+
+        <span className="section-divider" />
 
         {/* Academic Foundation*/}
         <div
@@ -195,6 +192,8 @@ export default function About() {
             </p>
           )}
         </div>
+
+        <span className="section-divider" />
 
         {/* Personal Information */}
         <div
@@ -256,7 +255,7 @@ export default function About() {
             duration: 0.5,
             ease: "easeOut",
           }}
-          className="text-text small-body font-medium my-1 relative main-trans group bg-white/5 p-4 backdrop-blur-xl"
+          className="text-text small-body font-medium my-1 relative main-trans group hover:bg-cardBg rounded-sm  sm:p-2 backdrop-blur-xl"
         >
           <span
             className="big-dot max-sm:hidden -translate-x-3.5 cursor-pointer
@@ -265,13 +264,16 @@ export default function About() {
           />
 
           {showAbout[4] ? (
-            <p className="text-text font-medium leading-relaxed tracking-wide">
-              <span className="font-bold">In my downtime,</span> I enjoy
+            <div className="text-text font-medium leading-relaxed tracking-wide">
+              <AboutMeParagraph
+                mark="In my downtime"
+                para="I enjoy
               climbing, reading, and exploring new technologies. I’m driven by
               curiosity and enjoy solving real-world problems—whether it’s
               through code or personal growth. Always open to new conversations,
-              ideas, and opportunities to collaborate.
-            </p>
+              ideas, and opportunities to collaborate."
+              />
+            </div>
           ) : (
             <p
               className="collapse-title"

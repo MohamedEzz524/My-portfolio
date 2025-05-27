@@ -1,28 +1,10 @@
-import { useEffect, useState } from "react";
 import { FaPalette, FaMoon, FaSun } from "react-icons/fa";
-import Label from "./Label";
+import useTheme from "../hooks/useTheme";
+import Label from "../Components/Label";
 
-export default function Themes() {
-  const [theme, setTheme] = useState(() => {
-    if (localStorage.getItem("theme")) {
-      return localStorage.getItem("theme") || "color-light";
-    } else return "color-light";
-  });
+export default function ThemesBox() {
+  const { theme, toggleTheme } = useTheme();
 
-  const handleTheme = (themeType) => {
-    if (themeType === "basic") {
-      setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
-    } else if (themeType === "colored") {
-      setTheme((prevTheme) =>
-        prevTheme === "color-light" ? "color-dark" : "color-light"
-      );
-    } else return;
-  };
-
-  useEffect(() => {
-    localStorage.setItem("theme", theme);
-    document.documentElement.setAttribute("data-theme", theme);
-  }, [theme]);
   return (
     <div className="fixed left-0 top-0 inline-flex  gap-4 z-20  bg-[var(--footer-bg)] shadow-md backdrop:blur-cardBlur p-2 text-white">
       <button
@@ -31,7 +13,7 @@ export default function Themes() {
             ? "bg-gradient-to-r from-[#2b2b2b] to-[#3c3c3c]"
             : "bg-gradient-to-r from-[#e6e6e6]  to-[#cccccc]"
         }`}
-        onClick={() => handleTheme("basic")}
+        onClick={() => toggleTheme("basic")}
         role="img"
         aria-label="theme-toggle"
       >
@@ -51,7 +33,7 @@ export default function Themes() {
             ? "bg-gradient-to-r from-[#001933] to-[#002d5c]"
             : "bg-gradient-to-r from-[#f6c9a0] to-[#e89c5a] "
         }`}
-        onClick={() => handleTheme("colored")}
+        onClick={() => toggleTheme("colored")}
       >
         <Label text="Fancy" />
         <span

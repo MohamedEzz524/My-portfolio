@@ -63,9 +63,13 @@ import QuizPh from "./assets/images/Country_Quiz_Ph.webp";
 import PropertyLarge from "./assets/images/Property_Large.webp";
 import PropertyPh from "./assets/images/Property_Small.webp";
 import RecipesLarge from "./assets/images/Recipes_Large.webp";
-import RecipesPh from "./assets/images/Recipes_Small.jpg";
+import RecipesPh from "./assets/images/Recipes_Small.webp";
 import Dashboard from "./assets/images/Dashboard.webp";
 import DashboardPh from "./assets/images/Dashboard_Ph.webp";
+import HooBank from "./assets/images/Hoo_bank.webp";
+import HooBankPh from "./assets/images/Hoo_bank_ph.webp";
+import WeatherLarge from "./assets/images/Weather.webp";
+import WeatherSmall from "./assets/images/Weather_ph.webp";
 
 export const aboutInfo = [
   {
@@ -171,7 +175,6 @@ export const frontend = [
   { id: "fe12", icon: <SiTailwindcss />, name: "Tailwind" },
   { id: "fe13", icon: <SiBootstrap />, name: "Bootstrap" },
   { id: "fe14", icon: <SiSass />, name: "Sass" },
-  { id: "fe15", icon: <SiPug />, name: "Pug" },
 ];
 
 export const backend = [
@@ -205,13 +208,13 @@ export const tools = [
 ];
 
 // Projects
-export const projects = [
+export const websites = [
   {
     id: "p1",
     large: zRevoLarge,
     small: zRevoPh,
     title: "Simone Project",
-    desc: "A production-ready portfolio template built with React and Tailwind CSS. Prioritizes scalability and performance with fully modular components, responsive design, and smooth UX powered by the Intersection Observer for section-based interactions.",
+    desc: "A production-ready portfolio template developed with React and Tailwind CSS. The project emphasizes scalability and maintainability through modular component design. It features responsive layouts and section-based interactions using the Intersection Observer API to enhance user experience.",
     tools: [
       "React",
       "Tailwind CSS",
@@ -243,7 +246,7 @@ export const projects = [
     large: portfolioLarge,
     small: portfolioPh,
     title: "Portfolio V1",
-    desc: "My first personal portfolio developed using React and custom CSS. Includes animated transitions, responsive layout, and scroll-triggered effects using Intersection Observer for dynamic content reveal.",
+    desc: "An early personal portfolio built using React and custom CSS. Showcases animated transitions and scroll-triggered content reveal using the Intersection Observer. Designed to establish a foundational structure for showcasing work in a responsive format.",
     tools: [
       "React",
       "Custom CSS",
@@ -259,7 +262,7 @@ export const projects = [
     large: SpecialLarge,
     small: SpecialPh,
     title: "Special Design",
-    desc: "A creative front-end project showcasing interactive animations, motion effects with JavaScript, theme toggling, and observer-driven UI reactions. Focuses on polished micro-interactions and engaging user flows.",
+    desc: "An interactive front-end concept exploring creative animations, theme toggling, and scroll-based effects using the Observer API. Focused on refining JavaScript-based UI interactions and enhancing user engagement through motion design.",
     tools: ["HTML5", "CSS3", "JavaScript", "Observer API", "Themes"],
     link: "https://mohamedezz524.github.io/Fourth-project/",
     github: "https://github.com/MohamedEzz524/Fourth-project",
@@ -269,7 +272,7 @@ export const projects = [
     large: ZeroLarge,
     small: ZeroPh,
     title: "ELZero Project",
-    desc: "A hands-on JavaScript training project focused on mastering DOM manipulation and core logic implementation. Built to reinforce understanding of dynamic content rendering and user interaction patterns.",
+    desc: "A JavaScript-focused practice project built to improve DOM manipulation skills and core logic implementation. Highlights include dynamic content rendering, responsive layout, and hands-on experience with vanilla JavaScript.",
     tools: ["HTML5", "CSS3", "JavaScript", "DOM Manipulation"],
     link: "https://mohamedezz524.github.io/Third-project/",
     github: "https://github.com/MohamedEzz524/Third-project",
@@ -286,39 +289,69 @@ export const projects = [
   },
   {
     id: "p7",
+    large: HooBank,
+    small: HooBankPh,
+    title: "Hoo-Bank UI",
+    desc: "A Bank Payment UI design, Demonstrates modular component development and responsive layout techniques. Intended to reinforce the fundamentals of modern UI architecture and tooling.",
+    tools: ["React", "Vite", "Tailwind", "Components", "Responsive Layout"],
+    link: "https://mohamedezz524.github.io/Hoo_bank/",
+    github: "https://github.com/MohamedEzz524/Hoo_Bank",
+  },
+  {
+    id: "p8",
     large: GPTLarge,
     small: GPTPh,
-    title: "GPT-3",
-    desc: "A sleek landing page concept inspired by GPT-3, designed to practice clean semantic HTML and pixel-perfect responsive layouts. Highlights structured content presentation and visual balance.",
+    title: "GPT-3 Clone",
+    desc: "A responsive landing page inspired by OpenAI’s GPT-3 concept. Built with semantic HTML and clean CSS to practice layout structure, spacing consistency, and visual clarity across devices.",
     tools: ["HTML5", "CSS3", "Responsive Layout"],
     link: "https://mohamedezz524.github.io/GPT-3/",
     github: "https://github.com/MohamedEzz524/GPT-3",
   },
   {
-    id: "p8",
+    id: "p9",
     large: KasperLarge,
     small: KasperPh,
     title: "Kasper",
-    desc: "A layout and design-focused project built with advanced CSS3, demonstrating visual hierarchy, clean UI patterns, and consistent spacing. Aimed at refining design clarity and responsive practices.",
+    desc: "A front-end design project created to focus on layout balance and visual structure using advanced CSS. Highlights include grid systems, typography management, and refined spacing for responsive presentation.",
     tools: ["HTML5", "CSS3", "Responsive Layout"],
     link: "https://mohamedezz524.github.io/Second-project/",
     github: "https://github.com/MohamedEzz524/Second-project",
   },
   {
-    id: "p9",
+    id: "p10",
     large: LeonLarge,
     small: LeonPh,
     title: "Leonagency",
-    desc: "My very first web project — a static site crafted with semantic HTML and fundamental CSS. A milestone for learning foundational layout, responsive structure, and design semantics.",
+    desc: "A foundational static website project using semantic HTML and basic CSS. Represents initial learning milestones in responsive web design and structuring accessible content.",
     tools: ["HTML5", "CSS3", "Responsive Design"],
     link: "https://mohamedezz524.github.io/First-project/",
     github: "https://github.com/MohamedEzz524/First-project",
   },
 ];
 
-export const recentWork = [
+export const apps = [
   {
     id: "rec0",
+    title: "Weather App",
+    large: WeatherLarge,
+    small: WeatherSmall,
+    desc: "A weather app built with React, TypeScript, and Tailwind CSS, providing real-time weather data through a REST API. It includes city search, unit switching between Celsius and Fahrenheit, 24-hour hourly updates, and 5-day forecasts. The app also offers a simple summary for major cities and uses the Context API for basic state management.",
+    tools: [
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "REST API",
+      "Context API",
+      "Responsive Design",
+      "Forecast Features",
+      "Unit Switching",
+    ],
+    link: "https://mohamedezz524.github.io/Weather_app/",
+    github: "https://github.com/MohamedEzz524/Weather_app",
+  },
+
+  {
+    id: "rec1",
     title: "Admin Dashboard",
     large: Dashboard,
     small: DashboardPh,
@@ -335,8 +368,9 @@ export const recentWork = [
     link: "https://mohamedezz524.github.io/Admin_dashboard/",
     github: "https://github.com/MohamedEzz524/Admin_dashboard",
   },
+
   {
-    id: "rec1",
+    id: "rec2",
     title: "Recipes App",
     large: RecipesLarge,
     small: RecipesPh,
@@ -353,7 +387,7 @@ export const recentWork = [
     github: "https://github.com/MohamedEzz524/Chefs_academy",
   },
   {
-    id: "rec2",
+    id: "rec3",
     title: "Country Quiz",
     large: QuizLarge,
     small: QuizPh,
@@ -370,7 +404,7 @@ export const recentWork = [
     github: "https://github.com/MohamedEzz524/Country_quiz",
   },
   {
-    id: "rec3",
+    id: "rec4",
     title: "Property Listing",
     large: PropertyLarge,
     small: PropertyPh,
@@ -385,5 +419,23 @@ export const recentWork = [
     ],
     link: "https://mohamedezz524.github.io/Property_listing/",
     github: "https://github.com/MohamedEzz524/Property_listing",
+  },
+];
+
+export const notes = [
+  {
+    id: "not1",
+    title: "More React Work",
+    link: "https://github.com/MohamedEzz524/React-apps",
+  },
+  {
+    id: "not2",
+    title: "CSS Animation",
+    link: "https://github.com/MohamedEzz524/Css-animation",
+  },
+  {
+    id: "not3",
+    title: "Problem Solving",
+    link: "https://github.com/MohamedEzz524/Problem-solving",
   },
 ];
