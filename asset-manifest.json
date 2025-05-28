@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/My-portfolio/static/css/main.e11bf33f.css",
-    "main.js": "/My-portfolio/static/js/main.82a73d0b.js",
+    "main.js": "/My-portfolio/static/js/main.7baef967.js",
     "static/media/Country_Quiz_Large.webp": "/My-portfolio/static/media/Country_Quiz_Large.f662f6cdd6550accf3c0.webp",
     "static/media/SpaceGrotesk-Light.ttf": "/My-portfolio/static/media/SpaceGrotesk-Light.77fdecb3422fbe54ed88.ttf",
     "static/media/SpaceGrotesk-Medium.ttf": "/My-portfolio/static/media/SpaceGrotesk-Medium.11c47748414ab8a89db0.ttf",
@@ -46,10 +46,10 @@
     "static/media/DevFolio_Large.webp": "/My-portfolio/static/media/DevFolio_Large.bf5c8510e7ce6636d0be.webp",
     "index.html": "/My-portfolio/index.html",
     "main.e11bf33f.css.map": "/My-portfolio/static/css/main.e11bf33f.css.map",
-    "main.82a73d0b.js.map": "/My-portfolio/static/js/main.82a73d0b.js.map"
+    "main.7baef967.js.map": "/My-portfolio/static/js/main.7baef967.js.map"
   },
   "entrypoints": [
     "static/css/main.e11bf33f.css",
-    "static/js/main.82a73d0b.js"
+    "static/js/main.7baef967.js"
   ]
 }
