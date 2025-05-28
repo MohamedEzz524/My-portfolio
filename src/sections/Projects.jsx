@@ -6,7 +6,7 @@ import { useMemo, useState } from "react";
 import CardButtons from "../Components/projects/CardButtons";
 import Notes from "../Components/Notes";
 import { FaArrowDownAZ, FaArrowDownZA } from "react-icons/fa6";
-import FilterWork from "../Components/projects/FilterWork";
+import FilterWork from "../Components/FilterWork";
 
 const allData = [apps, websites];
 const projectsFilters = ["ALL", "Websites", "Apps"];
@@ -40,8 +40,8 @@ export default function Projects() {
         />
 
         {/* MyWork */}
-        <div className="flex items-center justify-between gap-1 text-mainTitle">
-          <div className="flex items-center gap-2">
+        <div className="flex items-center justify-between gap-1 text-mainTitle md:text-xl text-base">
+          <div className="flex items-center gap-2 ">
             Viewing:
             <span className="text-sectionTitle title-body py-1 px-4 rounded-full bg-cardBg font-semibold underline underline-offset-2">
               {activeFilter}

@@ -1,4 +1,20 @@
-import { notes } from "../Data_Center";
+const notes = [
+  {
+    id: "not1",
+    title: "More React Work",
+    link: "https://github.com/MohamedEzz524/React-apps",
+  },
+  {
+    id: "not2",
+    title: "CSS Animation",
+    link: "https://github.com/MohamedEzz524/Css-animation",
+  },
+  {
+    id: "not3",
+    title: "Problem Solving",
+    link: "https://github.com/MohamedEzz524/Problem-solving",
+  },
+];
 
 const Notes = () => {
   return (

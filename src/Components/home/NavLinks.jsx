@@ -17,7 +17,7 @@ const NavLinks = () => {
           transition={{ duration: 0.5 }}
           className="relative w-[2px] h-48 bg-linkHover"
         />
-        <ul className="flex flex-col gap-[20px]">
+        <div className="flex flex-col gap-[20px]">
           {sections.map((item, i) => (
             <NavItem
               i={i}
@@ -27,11 +27,11 @@ const NavLinks = () => {
               isMobile={false}
             />
           ))}
-        </ul>
+        </div>
       </div>
 
       {/* Small Screens */}
-      <ul className="fixed lg:hidden top-1/2 right-4 -translate-y-1/2 flex flex-col items-center gap-1.5 z-[99]">
+      <div className="fixed lg:hidden top-1/2 right-4 -translate-y-1/2 flex flex-col items-center gap-1.5 z-[99]">
         {sections.map((item, i) => (
           <NavItem
             key={item}
@@ -40,7 +40,7 @@ const NavLinks = () => {
             isMobile={true}
           />
         ))}
-      </ul>
+      </div>
     </>
   );
 };
@@ -50,7 +50,7 @@ export default NavLinks;
 // ⬇️ NavItem Component
 const NavItem = ({ item, activeLink, isMobile, i }) => (
   <AnimatedSection key={item + i} delay={0.2 * i}>
-    <li className="text-link relative group">
+    <div className="text-link relative group">
       {isMobile && (
         <span
           aria-hidden={!isMobile}
@@ -96,6 +96,6 @@ const NavItem = ({ item, activeLink, isMobile, i }) => (
         </span>
         &gt;
       </a>
-    </li>
+    </div>
   </AnimatedSection>
 );

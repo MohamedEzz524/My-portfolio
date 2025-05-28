@@ -125,12 +125,6 @@ body {
 html {
   scroll-behavior: smooth;
 }
-
-body {
-  padding: 0;
-  margin: 0 auto;
-  box-sizing: border-box;
-}
 #portfolio::after {
   content: "";
   position: absolute;
@@ -311,21 +305,6 @@ body {
       }
     }
   }
-}
-
-@keyframes orbit {
-  0% {
-    transform: rotate(0deg) translateX(40px) rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg) translateX(40px) rotate(-360deg);
-  }
-}
-.animate-orbit {
-  animation: orbit 1.5s linear infinite;
-}
-.delay-200 {
-  animation-delay: 0.2s;
 }
 
 @layer utilities {

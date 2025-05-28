@@ -2,7 +2,7 @@ import HeroTitle from "../Components/Hero_title";
 import { frontend, backend, tools } from "../Data_Center";
 import { AnimatedSection } from "../Components/AnimatedSection";
 import { useMemo, useState } from "react";
-import FilterWork from "../Components/projects/FilterWork";
+import FilterWork from "../Components/FilterWork";
 
 const SkillGroup = ({ skills }) => (
   <div className="mb-6 group  min-h-[300px]">
