@@ -1,11 +1,11 @@
-const FilterWork = ({ active, setActive }) => {
+const FilterWork = ({ active, setActive, data }) => {
   return (
-    <div className="w-full flex justify-center gap-0 text-xl">
-      {["ALL", "Websites", "Apps"].map((filter) => (
+    <div className="w-full flex justify-center gap-2 text-base md:text-xl">
+      {data.map((filter) => (
         <button
           key={filter}
           className={`
-        relative px-4 py-2 font-mono
+        relative p-2 font-mono
         ${
           active === filter
             ? "text-primary font-bold"

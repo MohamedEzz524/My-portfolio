@@ -143,7 +143,7 @@ body {
 
 @layer components {
   .section-style {
-    @apply font-Dm scroll-mt-[5rem] w-full  relative;
+    @apply font-Dm w-full  relative;
   }
   .container-hero {
     @apply w-full h-full py-[3rem] md:py-[5rem] px-[1rem] md:px-[3rem] lg:px-[2rem] 2xl:px-[3rem] m-[0_auto] max-w-[1920px];

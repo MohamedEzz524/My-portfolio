@@ -11,7 +11,7 @@ import { academic, aboutInfo } from "../Data_Center.js";
 import { useState } from "react";
 import AboutMeParagraph from "../Components/AboutMeParagraph.jsx";
 
-export default function About() {
+export default function About({ ref }) {
   const [showAbout, setShowAbout] = useState(Array(5).fill(true));
 
   const toggleParent = (i, setShow) => {
@@ -23,7 +23,11 @@ export default function About() {
   };
 
   return (
-    <section id="about" className="section-style pb-[20px] border-divider">
+    <section
+      id="about"
+      ref={ref}
+      className="section-style pb-[20px] border-divider"
+    >
       <HeroTitle setShow={setShowAbout} state={true} title={`<ABOUT ME>`} />
       <div className="flex flex-col gap-2 px-5 py-4 shadow-md max-sm:border-none max-sm:p-0">
         {/* 0 */}
@@ -76,13 +80,13 @@ export default function About() {
                     <FaGraduationCap className="inline-block" />
                     Education
                   </h3>
-                  <p className="text-text font-semibold big-body flex items-center gap-2">
+                  <h4 className="text-text font-semibold big-body flex items-center gap-2">
                     Ain Shams University{" "}
                     <FaUniversity className="inline-block" />
-                  </p>
-                  <p className="text-text font-medium small-body">
+                  </h4>
+                  <h5 className="text-text font-medium small-body">
                     B.Sc. in Computer & Systems Engineering
-                  </p>
+                  </h5>
                   <p className="text-primary font-medium mt-1">2018 – 2023</p>
                 </motion.div>
 
@@ -102,14 +106,15 @@ export default function About() {
                     consultations, appointment booking, payments, and admin
                     management.
                   </p>
-                  <p className="text-sm font-medium text-specialText mb-1">
+                  <h4 className="text-sm font-medium text-specialText mb-1">
                     <span className="font-semibold">Role:</span> Documentation
                     Lead & Frontend Contributor
-                  </p>
+                  </h4>
                   <p className="text-sm text-text mb-2">
                     <span className="font-semibold">Tech Stack:</span> MERN
                     (MongoDB, Express.js, React.js, Node.js)
                   </p>
+
                   <ul className="list-disc list-inside text-sm text-text space-y-1">
                     <li>
                       Led documentation across the development cycle to ensure

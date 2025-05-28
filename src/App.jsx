@@ -9,6 +9,8 @@ import Footer from "./sections/Footer";
 import { AnimatedSection } from "./Components/AnimatedSection";
 
 function App() {
+  console.log("app fired");
+
   return (
     <main className="min-h-screen relative">
       <ThemeProvider>

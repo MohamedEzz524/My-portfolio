@@ -14,8 +14,7 @@ export default function ThemesBox() {
             : "bg-gradient-to-r from-[#e6e6e6]  to-[#cccccc]"
         }`}
         onClick={() => toggleTheme("basic")}
-        role="img"
-        aria-label="theme-toggle"
+        aria-label="Toggle Mono Theme"
       >
         <Label text="Monochrome" />
 
@@ -37,8 +36,7 @@ export default function ThemesBox() {
       >
         <Label text="Fancy" />
         <span
-          role="img"
-          aria-label="color-theme"
+          aria-label="Toggle Colored Theme"
           className="group-hover:rotate-45 main-trans"
         >
           <FaPalette className="text-lg sm:text-2xl" />

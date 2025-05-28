@@ -6,6 +6,8 @@ import NavLinks from "../Components/home/NavLinks.jsx";
 import { AnimatedSection } from "../Components/AnimatedSection.jsx";
 
 export default function Home() {
+  console.log("home fired");
+
   return (
     <section id="home" className="h-full">
       <div className="flex flex-col justify-between h-full lg:gap-[50px] gap-[20px] px-2 max-lg:mb-[3rem]">

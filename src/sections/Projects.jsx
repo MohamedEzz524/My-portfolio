@@ -9,6 +9,7 @@ import { FaArrowDownAZ, FaArrowDownZA } from "react-icons/fa6";
 import FilterWork from "../Components/projects/FilterWork";
 
 const allData = [apps, websites];
+const projectsFilters = ["ALL", "Websites", "Apps"];
 
 export default function Projects() {
   const [activeFilter, setActiveFilter] = useState("ALL");
@@ -24,7 +25,7 @@ export default function Projects() {
 
   const sortedData = useMemo(() => {
     const current = [...filteredData];
-    return activeSort === "Oldest" ? current : [...current].reverse();
+    return activeSort === "Newest" ? current : [...current].reverse();
   }, [filteredData, activeSort]);
 
   return (
@@ -32,12 +33,16 @@ export default function Projects() {
       <HeroTitle title={`<PROJECTS>`} />
 
       <div className="max-md:px-2 py-4 flex flex-col gap-5 ">
-        <FilterWork active={activeFilter} setActive={setActiveFilter} />
+        <FilterWork
+          data={projectsFilters}
+          active={activeFilter}
+          setActive={setActiveFilter}
+        />
 
         {/* MyWork */}
         <div className="flex items-center justify-between gap-1 text-mainTitle">
           <div className="flex items-center gap-2">
-            Current Viewing:
+            Viewing:
             <span className="text-sectionTitle title-body py-1 px-4 rounded-full bg-cardBg font-semibold underline underline-offset-2">
               {activeFilter}
             </span>

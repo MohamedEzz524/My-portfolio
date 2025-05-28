@@ -1,22 +1,13 @@
 import HeroTitle from "../Components/Hero_title";
 import { frontend, backend, tools } from "../Data_Center";
 import { AnimatedSection } from "../Components/AnimatedSection";
-import { motion } from "framer-motion";
+import { useMemo, useState } from "react";
+import FilterWork from "../Components/projects/FilterWork";
 
-const SkillGroup = ({ title, skills }) => (
-  <div className="mb-6 group">
+const SkillGroup = ({ skills }) => (
+  <div className="mb-6 group  min-h-[300px]">
     {/* Skill header */}
-    <div className="col-span-full mb-2 py-2">
-      <h3 className="text-mainTitle font-bold uppercase mb-2 relative w-fit ">
-        {title}:
-        <motion.span
-          initial={{ scaleX: 0 }}
-          animate={{ scaleX: 1 }}
-          transition={{ duration: 0.5 }}
-          className="absolute -bottom-0.5 left-0 -translate-x-1/2 bg-mainTitle w-full h-[1px]"
-        />
-      </h3>
-    </div>
+    <div className="col-span-full mb-2 py-2"></div>
     <div className="main-trans  grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-3 2xl:grid-cols-4 gap-3 max-md:gap-2">
       {skills.map(({ id, icon, name }, i) => (
         <AnimatedSection key={id} delay={0.05 * i}>
@@ -39,7 +30,18 @@ const SkillGroup = ({ title, skills }) => (
   </div>
 );
 
+const filters = ["FRONTEND", "BACKEND", "TOOLS"];
 export default function Skills() {
+  const [activeFilter, setActiveFilter] = useState("FRONTEND");
+
+  const filteredSkills = useMemo(() => {
+    return activeFilter === "BACKEND"
+      ? backend
+      : activeFilter === "TOOLS"
+      ? tools
+      : frontend;
+  }, [activeFilter]);
+
   return (
     <section id="skills" className="section-style pb-[20px] border-divider">
       <HeroTitle state={true} title={`<SKILLS>`} />
@@ -51,11 +53,16 @@ export default function Skills() {
             industry.
           </h3>
 
-          <SkillGroup title="Frontend" skills={frontend} />
-          <span className="section-divider" />
-          <SkillGroup title="Backend & CS" skills={backend} />
-          <span className="section-divider" />
-          <SkillGroup title="Tools & Platforms" skills={tools} />
+          <div className="max-md:px-2 py-4 flex flex-col gap-5">
+            <FilterWork
+              data={filters}
+              active={activeFilter}
+              setActive={setActiveFilter}
+            />
+
+            <SkillGroup skills={filteredSkills} />
+            <span className="section-divider" />
+          </div>
         </div>
       </div>
       <HeroTitle state={false} title={`</SKILLS>`} />
