@@ -10,8 +10,9 @@ import HeroTitle from "../Components/Hero_title.jsx";
 import { academic, aboutInfo } from "../Data_Center.js";
 import { useState } from "react";
 import AboutMeParagraph from "../Components/AboutMeParagraph.jsx";
+import { AnimatedSection } from "../Components/AnimatedSection.jsx";
 
-export default function About({ ref }) {
+export default function About() {
   const [showAbout, setShowAbout] = useState(Array(5).fill(true));
 
   const toggleParent = (i, setShow) => {
@@ -23,11 +24,7 @@ export default function About({ ref }) {
   };
 
   return (
-    <section
-      id="about"
-      ref={ref}
-      className="section-style pb-[20px] border-divider"
-    >
+    <section id="about" className="section-style pb-[20px] border-divider">
       <HeroTitle setShow={setShowAbout} state={true} title={`<ABOUT ME>`} />
       <div className="flex flex-col gap-2 px-5 py-4 shadow-md max-sm:border-none max-sm:p-0">
         {/* 0 */}
@@ -252,16 +249,7 @@ export default function About({ ref }) {
         <span className="section-divider"></span>
 
         {/* DownTime */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "0px 0px -50px 0px" }}
-          transition={{
-            duration: 0.5,
-            ease: "easeOut",
-          }}
-          className="text-text small-body font-medium my-1 relative main-trans group hover:bg-cardBg rounded-sm  sm:p-2 backdrop-blur-xl"
-        >
+        <AnimatedSection className="text-text small-body font-medium my-1 relative transition-colors group hover:bg-cardBg rounded-sm  sm:p-2 backdrop-blur-xl">
           <span
             className="big-dot max-sm:hidden -translate-x-3.5 cursor-pointer
             ring-2 ring-ring ring-offset-2 ring-offset-bg group-hover:ring-primary"
@@ -287,7 +275,7 @@ export default function About({ ref }) {
               Off Screen
             </p>
           )}
-        </motion.div>
+        </AnimatedSection>
       </div>
       <HeroTitle setShow={setShowAbout} state={false} title={`</ABOUT ME>`} />
     </section>

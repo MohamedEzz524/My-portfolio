@@ -32,51 +32,46 @@ export default function Projects() {
     <section id="projects" className="section-style pb-[20px] border-divider">
       <HeroTitle title={`<PROJECTS>`} />
 
-      <div className="max-md:px-2 py-4 flex flex-col gap-5 ">
-        <FilterWork
-          data={projectsFilters}
-          active={activeFilter}
-          setActive={setActiveFilter}
-        />
-
-        {/* MyWork */}
-        <div className="flex items-center justify-between gap-1 text-mainTitle md:text-xl text-base">
-          <div className="flex items-center gap-2 ">
-            Viewing:
-            <span className="text-sectionTitle title-body py-1 px-4 rounded-full bg-cardBg font-semibold underline underline-offset-2">
-              {activeFilter}
-            </span>
-            <span className="text-sectionTitle title-body py-1 px-4 rounded-full bg-cardBg font-semibold underline underline-offset-2">
-              {activeSort}
-            </span>
-          </div>
-
-          <motion.div
-            initial={{ opacity: 0, scale: 0 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5 }}
-            className="p-4 rounded-full hover:bg-cardBg cursor-pointer transition-colors duration-300 ease-out active:opacity-80"
-            onClick={() =>
-              setActiveSort((prev) => (prev === "Newest" ? "Oldest" : "Newest"))
-            }
-          >
-            {activeSort === "Oldest" ? (
-              <FaArrowDownZA size={24} />
-            ) : (
-              <FaArrowDownAZ size={24} />
-            )}
-          </motion.div>
+      <FilterWork
+        data={projectsFilters}
+        active={activeFilter}
+        setActive={setActiveFilter}
+      />
+      {/* MyWork */}
+      <div className="flex items-center justify-between gap-1 my-2 text-mainTitle md:text-xl text-base">
+        <div className="flex items-center gap-2 ">
+          Viewing:
+          <span className="text-sectionTitle title-body py-1 px-4 rounded-full bg-cardBg font-semibold underline underline-offset-2">
+            {activeFilter}
+          </span>
+          <span className="text-sectionTitle title-body py-1 px-4 rounded-full bg-cardBg font-semibold underline underline-offset-2">
+            {activeSort}
+          </span>
         </div>
 
-        {sortedData.map((project, i) => (
-          <ProjectCard key={project.id} project={project} i={i} />
-        ))}
-
-        <span className="section-divider"></span>
-
-        {/* Notes */}
-        <Notes />
+        <motion.div
+          initial={{ opacity: 0, scale: 0 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5 }}
+          className="p-4 rounded-full hover:bg-cardBg cursor-pointer transition-colors duration-300 ease-out active:opacity-80"
+          onClick={() =>
+            setActiveSort((prev) => (prev === "Newest" ? "Oldest" : "Newest"))
+          }
+        >
+          {activeSort === "Oldest" ? (
+            <FaArrowDownZA size={24} />
+          ) : (
+            <FaArrowDownAZ size={24} />
+          )}
+        </motion.div>
       </div>
+
+      {sortedData.map((project, i) => (
+        <ProjectCard key={project.id} project={project} i={i} />
+      ))}
+
+      {/* Notes */}
+      <Notes />
 
       <HeroTitle title={`</PROJECTS>`} />
     </section>
@@ -99,7 +94,7 @@ const ProjectCard = ({ project, i }) => {
                   alt={`${project.title} desktop view`}
                   loading="lazy"
                   decoding="async"
-                  className={` w-full object-cover transition-opacity duration-300 group-hover:opacity-100 opacity-80`}
+                  className={` w-full min-w-52 object-cover transition-opacity duration-300 group-hover:opacity-100 opacity-80`}
                 />
               </div>
 

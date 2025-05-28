@@ -1,6 +1,6 @@
 const FilterWork = ({ active, setActive, data }) => {
   return (
-    <div className="w-full flex justify-center gap-2 text-base md:text-xl">
+    <div className="w-full flex justify-center gap-2 text-base md:text-xl my-2.5">
       {data.map((filter) => (
         <button
           key={filter}

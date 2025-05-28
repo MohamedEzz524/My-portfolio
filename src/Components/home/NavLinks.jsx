@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { AnimatedSection } from "../AnimatedSection";
 import { useSectionObserver } from "../../hooks/useSectionObserver";
 
@@ -11,12 +10,8 @@ const NavLinks = () => {
     <>
       {/* Large Screen */}
       <div className="lg:flex gap-4 relative hidden">
-        <motion.div
-          initial={{ opacity: 0, y: -50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="relative w-[2px] h-48 bg-linkHover"
-        />
+        <AnimatedSection className="relative w-[2px] h-48 bg-linkHover" />
+
         <div className="flex flex-col gap-[20px]">
           {sections.map((item, i) => (
             <NavItem
@@ -49,7 +44,7 @@ export default NavLinks;
 
 // ⬇️ NavItem Component
 const NavItem = ({ item, activeLink, isMobile, i }) => (
-  <AnimatedSection key={item + i} delay={0.2 * i}>
+  <AnimatedSection key={item + i} delay={0.1 * i}>
     <div className="text-link relative group">
       {isMobile && (
         <span

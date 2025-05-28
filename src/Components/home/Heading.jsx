@@ -81,7 +81,7 @@ const Heading = () => {
           |
         </span>
       </p>
-      <p className="max-w-[400px]  text-text big-body font-medium opacity-90">
+      <p className="max-w-[430px]  text-text big-body font-medium opacity-90">
         <TextAnimation
           text="I am building and managing Websites and Web Applications lead for engaging, interactive, and user-friendly web
               experiences "
