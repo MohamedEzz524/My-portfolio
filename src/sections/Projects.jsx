@@ -37,14 +37,15 @@ export default function Projects() {
         active={activeFilter}
         setActive={setActiveFilter}
       />
+
       {/* MyWork */}
       <div className="flex items-center justify-between gap-1 my-2 text-mainTitle md:text-xl text-base">
         <div className="flex items-center gap-2 ">
           Viewing:
-          <span className="text-sectionTitle title-body py-1 px-4 rounded-full bg-cardBg font-semibold underline underline-offset-2">
+          <span className="text-sectionTitle big-body py-1 px-4 rounded-full bg-cardBg font-semibold underline underline-offset-2">
             {activeFilter}
           </span>
-          <span className="text-sectionTitle title-body py-1 px-4 rounded-full bg-cardBg font-semibold underline underline-offset-2">
+          <span className="text-sectionTitle big-body py-1 px-4 rounded-full bg-cardBg font-semibold underline underline-offset-2">
             {activeSort}
           </span>
         </div>
@@ -70,7 +71,6 @@ export default function Projects() {
         <ProjectCard key={project.id} project={project} i={i} />
       ))}
 
-      {/* Notes */}
       <Notes />
 
       <HeroTitle title={`</PROJECTS>`} />

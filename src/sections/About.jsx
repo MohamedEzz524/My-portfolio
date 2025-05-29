@@ -24,7 +24,10 @@ export default function About() {
   };
 
   return (
-    <section id="about" className="section-style pb-[20px] border-divider">
+    <section
+      id="about"
+      className="section-style pb-[20px] border-divider lg:mt-0 mt-8"
+    >
       <HeroTitle setShow={setShowAbout} state={true} title={`<ABOUT ME>`} />
       <div className="flex flex-col gap-2 px-5 py-4 shadow-md max-sm:border-none max-sm:p-0">
         {/* 0 */}
