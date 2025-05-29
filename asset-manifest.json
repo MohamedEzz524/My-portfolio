@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/My-portfolio/static/css/main.0b96e244.css",
-    "main.js": "/My-portfolio/static/js/main.549d1d82.js",
+    "main.css": "/My-portfolio/static/css/main.a66a93ae.css",
+    "main.js": "/My-portfolio/static/js/main.e430d73a.js",
     "static/media/Country_Quiz_Large.webp": "/My-portfolio/static/media/Country_Quiz_Large.f662f6cdd6550accf3c0.webp",
     "static/media/SpaceGrotesk-Light.ttf": "/My-portfolio/static/media/SpaceGrotesk-Light.77fdecb3422fbe54ed88.ttf",
     "static/media/SpaceGrotesk-Medium.ttf": "/My-portfolio/static/media/SpaceGrotesk-Medium.11c47748414ab8a89db0.ttf",
@@ -45,11 +45,11 @@
     "static/media/DevFolio_Ph.webp": "/My-portfolio/static/media/DevFolio_Ph.cc7f74192ad0389b56f8.webp",
     "static/media/DevFolio_Large.webp": "/My-portfolio/static/media/DevFolio_Large.bf5c8510e7ce6636d0be.webp",
     "index.html": "/My-portfolio/index.html",
-    "main.0b96e244.css.map": "/My-portfolio/static/css/main.0b96e244.css.map",
-    "main.549d1d82.js.map": "/My-portfolio/static/js/main.549d1d82.js.map"
+    "main.a66a93ae.css.map": "/My-portfolio/static/css/main.a66a93ae.css.map",
+    "main.e430d73a.js.map": "/My-portfolio/static/js/main.e430d73a.js.map"
   },
   "entrypoints": [
-    "static/css/main.0b96e244.css",
-    "static/js/main.549d1d82.js"
+    "static/css/main.a66a93ae.css",
+    "static/js/main.e430d73a.js"
   ]
 }
