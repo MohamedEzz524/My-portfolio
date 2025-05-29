@@ -15,11 +15,6 @@ export const AnimatedSection = ({ children, delay = 0, className = "" }) => {
       }}
       viewport={{ once: true, margin: "0px 0px 0px 0px" }}
       className={`motion-section ${className}`}
-      style={{
-        // CSS-based mobile optimizations
-        transform: "translateZ(0)", // Force GPU acceleration
-        backfaceVisibility: "hidden",
-      }}
     >
       {children}
     </motion.div>

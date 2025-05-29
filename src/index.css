@@ -321,6 +321,8 @@ html {
 
 .motion-section {
   will-change: transform, opacity;
+  transform: translateZ(0);
+  backface-visibility: "hidden";
 }
 @media (prefers-reduced-motion: reduce) {
   .motion-section {

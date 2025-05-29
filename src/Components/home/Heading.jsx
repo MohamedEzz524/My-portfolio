@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import TextAnimation from "../TextAnimation";
 import { motion, AnimatePresence } from "framer-motion";
 
 const ROLES = ["Software Eng.", "Problem Solver.", "Web Developer."];
@@ -15,21 +14,14 @@ const Heading = () => {
       </p>
 
       <h1 className="text-mainTitle font-Space font-extrabold text-[clamp(2rem,3vw+.5rem,3.5rem)]">
-        <TextAnimation
-          text="Mohamed ElSayed"
-          animation="pulse"
-          delay={0.25}
-          type=""
-        />
+        Mohamed ElSayed
       </h1>
 
       <RolesAnimation />
 
-      <p className="max-w-[430px]  text-text big-body font-medium opacity-90">
-        <TextAnimation
-          text="I am building and managing Websites and Web Applications lead for engaging, interactive, and user-friendly web
-              experiences "
-        />
+      <p className="max-w-[430px] text-text big-body font-medium opacity-90">
+        I am building and managing Websites and Web Applications lead for
+        engaging, interactive, and user-friendly web experiences
       </p>
     </div>
   );
