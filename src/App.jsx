@@ -6,11 +6,8 @@ import Skills from "./sections/Skills";
 import Projects from "./sections/Projects";
 import Contact from "./sections/Contact";
 import Footer from "./sections/Footer";
-import { AnimatedSection } from "./Components/AnimatedSection";
 
 function App() {
-  console.log("app fired");
-
   return (
     <main className="min-h-screen relative">
       <ThemeProvider>
@@ -23,9 +20,7 @@ function App() {
               <Home />
             </div>
             <div className="lg:basis-[52%] h-fit flex flex-col gap-[10px] pl-2 ">
-              <AnimatedSection>
-                <About />
-              </AnimatedSection>
+              <About />
               <Skills />
               <Projects />
               <Contact />

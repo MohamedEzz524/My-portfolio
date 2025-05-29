@@ -35,7 +35,7 @@ body {
     --card-border: rgba(255, 0, 212, 0.14);
     --border: #00b8e6;
     --shadow: rgba(0, 229, 255, 0.18);
-    --button-bg: linear-gradient(135deg, #00ffff, #ff00d4);
+    --button-bg: linear-gradient(135deg, #00d4ff, #ff00c8);
     --button-hover: linear-gradient(135deg, #00cfff, #d400a8);
     --button-text: #0a0a1a;
     --special-text: #ff00d4;
@@ -59,7 +59,7 @@ body {
     --card-border: #cbd6e2;
     --border: #b0bec5;
     --shadow: rgba(163, 177, 198, 0.3);
-    --button-bg: linear-gradient(145deg, #f5f8ff, #d8dbe8);
+    --button-bg: linear-gradient(135deg, #a3bfff, #7b94d1);
     --button-hover: linear-gradient(145deg, #ffffff, #c8cddc);
     --button-text: #1e1e1e;
     --special-text: #475ca8;
@@ -84,7 +84,7 @@ body {
     --card-border: rgba(255, 255, 255, 0.08);
     --border: #3c4d6b;
     --shadow: rgba(255, 255, 255, 0.03);
-    --button-bg: linear-gradient(135deg, #608fff, #a1bcff);
+    --button-bg: linear-gradient(135deg, #4c6eff, #a1bcff);
     --button-hover: linear-gradient(135deg, #90b5ff, #dbe6ff);
     --special-text: #c7ddff;
     --contact-highlight: #e4eeff;

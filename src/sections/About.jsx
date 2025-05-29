@@ -74,7 +74,7 @@ export default function About() {
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
                   viewport={{ once: true, margin: "0px 0px -50px 0px" }}
-                  transition={{ duration: 1 }}
+                  transition={{ duration: 0.3 }}
                 >
                   <h3 className="card-title">
                     <FaGraduationCap className="inline-block" />
@@ -94,7 +94,7 @@ export default function About() {
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
                   viewport={{ once: true, margin: "0px 0px -50px 0px" }}
-                  transition={{ duration: 1 }}
+                  transition={{ duration: 0.3 }}
                   className="mt-6 p-4 rounded-xl bg-[var(--card-bg)] shadow-md border border-[var(--card-border)] backdrop-blur-md"
                 >
                   <h3 className="text-sectionTitle text-lg font-semibold mb-1">
@@ -158,15 +158,8 @@ export default function About() {
               </h3>
               <div className="grid max-sm:grid-cols-1 lg:grid-cols-2 max-lg:grid-cols-3 max-md:grid-cols-2 gap-1">
                 {academic.map((a, i) => (
-                  <motion.div
-                    initial={{ opacity: 0, y: 50 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, margin: "0px 0px -50px 0px" }}
-                    transition={{
-                      duration: 0.5,
-                      delay: 0.1 * i,
-                      ease: "easeOut",
-                    }}
+                  <AnimatedSection
+                    delay={0.1 * i}
                     key={a.id}
                     className=" text-text rounded-sm p-2"
                   >
@@ -184,7 +177,7 @@ export default function About() {
                         </li>
                       ))}
                     </ul>
-                  </motion.div>
+                  </AnimatedSection>
                 ))}
               </div>
             </div>
@@ -218,15 +211,8 @@ export default function About() {
             </h3>
             <div className="grid max-sm:grid-cols-1 lg:grid-cols-2 max-lg:grid-cols-3 max-md:grid-cols-2 gap-1">
               {aboutInfo.map(({ name, id, value, icon }, i) => (
-                <motion.div
-                  initial={{ opacity: 0, y: 50 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "0px 0px -50px 0px" }}
-                  transition={{
-                    duration: 0.5,
-                    delay: 0.2 * i,
-                    ease: "easeOut",
-                  }}
+                <AnimatedSection
+                  delay={0.1 * i}
                   key={id}
                   className="small-body rounded-sm p-2"
                 >
@@ -235,7 +221,7 @@ export default function About() {
                     {name}:
                   </p>
                   <p className="text-text font-medium  main-trans">{value}</p>
-                </motion.div>
+                </AnimatedSection>
               ))}
             </div>
           </div>

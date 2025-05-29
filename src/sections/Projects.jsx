@@ -1,6 +1,5 @@
 import HeroTitle from "../Components/Hero_title";
 import { websites, apps } from "../Data_Center";
-import { AnimatedSection } from "../Components/AnimatedSection";
 import { motion } from "framer-motion";
 import { useMemo, useState } from "react";
 import CardButtons from "../Components/projects/CardButtons";
@@ -80,7 +79,12 @@ export default function Projects() {
 
 const ProjectCard = ({ project, i }) => {
   return (
-    <AnimatedSection>
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 1, ease: "easeOut" }}
+      viewport={{ once: true, margin: "0px 0px -50px 0px" }}
+    >
       <div
         className={` flex flex-col gap-2.5 border-divider group items-start relative z-[1] rounded-lg main-trans shadow-lg text-[clamp(0.9rem,1vw+0.3rem,1.1rem)] `}
       >
@@ -137,6 +141,6 @@ const ProjectCard = ({ project, i }) => {
       </div>
 
       {i !== websites.length - 1 && <span className="section-divider"></span>}
-    </AnimatedSection>
+    </motion.div>
   );
 };

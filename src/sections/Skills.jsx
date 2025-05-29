@@ -10,18 +10,18 @@ const SkillGroup = ({ skills }) => (
     <div className="col-span-full mb-2 py-2"></div>
     <div className="main-trans  grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-3 2xl:grid-cols-4 gap-3 max-md:gap-2">
       {skills.map(({ id, icon, name }, i) => (
-        <AnimatedSection key={id} delay={0.05 * i}>
-          <div
-            title={name}
-            className="bg-cardBg group-hover:before:opacity-100 skill-item  px-4 py-3 rounded-lg border border-cardBorder shadow-md overflow-hidden flex items-center gap-2 text-[clamp(.5rem,1vw+.25rem,.8rem)] 2xl:text-[.9rem] text-white"
-          >
-            <div className="absolute left-0 bottom-0 w-1/3 h-full inline-flex justify-center items-center bg-cardBorder text-[clamp(1.1rem,1.75vw+.3rem,2rem)] rounded-lg bg-buttonBg p-1 md:p-1.5 shadow-lg">
-              {icon}
-            </div>
-            <p className="text-text text-xs truncate lg:text-sm relative left-1/3 font-bold font-Space">
-              {name}
-            </p>
+        <AnimatedSection
+          delay={0.01 * i}
+          key={id + name}
+          title={name}
+          className="bg-cardBg group-hover:before:opacity-100 skill-item  px-4 py-3 rounded-lg border border-cardBorder shadow-md overflow-hidden flex items-center gap-2 text-[clamp(.5rem,1vw+.25rem,.8rem)] 2xl:text-[.9rem] text-white"
+        >
+          <div className="absolute left-0 bottom-0 w-1/3 h-full inline-flex justify-center items-center bg-cardBorder text-[clamp(1.1rem,1.75vw+.3rem,2rem)] rounded-lg bg-buttonBg p-1 md:p-1.5 shadow-lg">
+            {icon}
           </div>
+          <p className="text-text text-xs truncate lg:text-sm relative left-1/3 font-bold font-Space">
+            {name}
+          </p>
         </AnimatedSection>
       ))}
     </div>
