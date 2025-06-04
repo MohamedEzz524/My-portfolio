@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/My-portfolio/static/css/main.87f3a206.css",
-    "main.js": "/My-portfolio/static/js/main.b2826d69.js",
+    "main.js": "/My-portfolio/static/js/main.d52e3302.js",
     "static/media/Country_Quiz_Large.webp": "/My-portfolio/static/media/Country_Quiz_Large.f662f6cdd6550accf3c0.webp",
     "static/media/Dashboard.webp": "/My-portfolio/static/media/Dashboard.1c3c7cb747d01e038784.webp",
     "static/media/Bakeora_Large.webp": "/My-portfolio/static/media/Bakeora_Large.7436f4bdbd3a6485ab6d.webp",
@@ -12,6 +12,7 @@
     "static/media/PortfolioV1-ph.webp": "/My-portfolio/static/media/PortfolioV1-ph.c7cf44cd1f3509dfbff5.webp",
     "static/media/Recipes_Small.webp": "/My-portfolio/static/media/Recipes_Small.00afd4e1604c2e53d511.webp",
     "static/media/Hoo_bank.webp": "/My-portfolio/static/media/Hoo_bank.0c602e0b8f5074c94ac9.webp",
+    "static/media/TodoPh.webp": "/My-portfolio/static/media/TodoPh.8c070b4a692aba2edfab.webp",
     "static/media/Recipes_Large.webp": "/My-portfolio/static/media/Recipes_Large.4b42512ec0a6fe327c13.webp",
     "static/media/Weather.webp": "/My-portfolio/static/media/Weather.a50377230c32e18dc42d.webp",
     "static/media/GPT_Ph.webp": "/My-portfolio/static/media/GPT_Ph.eb942b2950b1d3a1fd00.webp",
@@ -27,6 +28,7 @@
     "static/media/Hoo_bank_ph.webp": "/My-portfolio/static/media/Hoo_bank_ph.d40e3e03e3e0f02a1c5c.webp",
     "static/media/leonagency.webp": "/My-portfolio/static/media/leonagency.a70c01f3e600eb65d104.webp",
     "static/media/SpecialDesign.webp": "/My-portfolio/static/media/SpecialDesign.e260880781de47196282.webp",
+    "static/media/TodoLarge.webp": "/My-portfolio/static/media/TodoLarge.54323f967e8c2c274c6c.webp",
     "static/media/Country_Quiz_Ph.webp": "/My-portfolio/static/media/Country_Quiz_Ph.61fd8c83f8746e736819.webp",
     "static/media/animation.webp": "/My-portfolio/static/media/animation.48572c0617cdba2a4634.webp",
     "static/media/specialDesign_ph.webp": "/My-portfolio/static/media/specialDesign_ph.b97b7159319e188db586.webp",
@@ -40,10 +42,10 @@
     "static/media/DevFolio_Large.webp": "/My-portfolio/static/media/DevFolio_Large.bf5c8510e7ce6636d0be.webp",
     "index.html": "/My-portfolio/index.html",
     "main.87f3a206.css.map": "/My-portfolio/static/css/main.87f3a206.css.map",
-    "main.b2826d69.js.map": "/My-portfolio/static/js/main.b2826d69.js.map"
+    "main.d52e3302.js.map": "/My-portfolio/static/js/main.d52e3302.js.map"
   },
   "entrypoints": [
     "static/css/main.87f3a206.css",
-    "static/js/main.b2826d69.js"
+    "static/js/main.d52e3302.js"
   ]
 }
