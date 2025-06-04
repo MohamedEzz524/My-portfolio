@@ -70,6 +70,8 @@ import HooBank from "./assets/images/Hoo_bank.webp";
 import HooBankPh from "./assets/images/Hoo_bank_ph.webp";
 import WeatherLarge from "./assets/images/Weather.webp";
 import WeatherSmall from "./assets/images/Weather_ph.webp";
+import TodoLarge from "./assets/images/TodoLarge.webp";
+import TodoPh from "./assets/images/TodoPh.webp";
 
 export const aboutInfo = [
   {
@@ -388,6 +390,25 @@ export const apps = [
   },
   {
     id: "rec3",
+    title: "Smart Trip Packing List",
+    large: TodoLarge,
+    small: TodoPh,
+    desc: "A smart and organized todo list app designed for planning trips. Users can create multiple named lists, add items, mark them as packed or unpacked, and track progress dynamically. All data is saved in local storage for persistence.",
+    tools: [
+      "React",
+      "TypeScript",
+      "Context API",
+      "Local Storage",
+      "List Management",
+      "Dynamic Status Tracking",
+      "Tailwind CSS",
+      "Framer Motion",
+    ],
+    link: "https://mohamedezz524.github.io/Todo_List/",
+    github: "https://github.com/MohamedEzz524/Todo_List",
+  },
+  {
+    id: "rec4",
     title: "Country Quiz",
     large: QuizLarge,
     small: QuizPh,
@@ -404,7 +425,7 @@ export const apps = [
     github: "https://github.com/MohamedEzz524/Country_quiz",
   },
   {
-    id: "rec4",
+    id: "rec5",
     title: "Property Listing",
     large: PropertyLarge,
     small: PropertyPh,

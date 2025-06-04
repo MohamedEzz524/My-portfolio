@@ -90,7 +90,7 @@ const ProjectCard = ({ project, i }) => {
       >
         {/* Device Mockups - Left Column */}
         <div className="flex flex-col sm:flex-row gap-2.5 max-sm:card-style">
-          <div className="flex flex-col gap-2.5 sm:w-52 ">
+          <div className="flex flex-col gap-2.5 sm:w-52">
             <div className="relative">
               <div className="desktop-mockup w-full h-full rounded-lg overflow-hidden shadow-xl border-[6px] border-[#374151]">
                 <img

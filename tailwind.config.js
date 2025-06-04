@@ -14,7 +14,6 @@ module.exports = {
       fontFamily: {
         Space: ["var(--font-space)"],
         Dm: ["var(--font-dm)"],
-        Orbitron: ["var(--font-orbitron)"],
       },
       colors: {
         primary: "var(--primary)",
